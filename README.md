@@ -39,7 +39,17 @@ Generates `out.pdf` in the project root to verify font rendering.
 make test
 ```
 
-### 4. Open Generated PDF (macOS)
+### 4. Verify Fonts
+
+To confirm that Arial is correctly embedded in the generated PDF, you can use the following command:
+
+```bash
+strings out.pdf | grep FontName
+```
+
+Alternatively, open `out.pdf` in a PDF viewer (like Adobe Acrobat or macOS Preview) and inspect the document properties to verify that **ArialMT** or **Arial-BoldMT** is listed under the fonts section.
+
+### 5. Open Generated PDF (macOS)
 
 ```bash
 make open
